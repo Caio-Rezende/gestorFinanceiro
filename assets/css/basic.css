@@ -1,0 +1,350 @@
+/*
+    Document   : main
+    Created on : 28/03/2013, 23:30:57
+    Author     : caiorezende
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    font-family: sans-serif, serif;
+    font-size: 13px;
+    height: 10px;
+    line-height: 1.5em;
+    margin: 0;
+    vertical-align: middle;
+    min-width: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.selected,
+#searchResult li:hover,
+a:hover {
+    background-color: lemonchiffon;
+    color: black;
+}
+
+.entrada {
+    color: green;
+}
+
+.saida {
+    color: red;
+}
+
+/***********************HEADER*************************************************/
+.header {
+    background-color: #3771c8;
+    color: #fff;
+    float: left;
+    font-size: inherit;
+    position: absolute;
+    vertical-align: top;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header h1 {
+    display: inline;
+    font-size: 1.4em;
+}
+
+.header h2 {
+    border-width: 0;
+    display: inline;
+    font-size: 1.1em;
+}
+
+.header ul{
+    background-color: #3771c8;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+    position: absolute;
+}
+
+.header li {
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    display: none;
+    margin: 0 0 10px;
+    padding: 0 5px;
+    position: relative;
+    width: 100%;
+}
+
+.header li:hover,
+.header .active {
+    border-left: 4px solid white;
+}
+
+.header .active{
+    position: absolute;
+    top: 0;
+}
+
+.header .active,
+.header ul:hover li{
+    display: block !important;
+}
+
+.header .wrapper{
+    padding: 12px;
+}
+
+.header .wrapper div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/***********************USER***************************************************/
+.user{
+    float: right;
+    min-width: 100px;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+}
+
+.user a{
+    display: none;
+    padding: 0 0 5px;
+}
+
+.user a:first-child{
+    padding-top: 5px;
+}
+
+.user a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.user:hover a{
+    background-color: #3771c8;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+/***********************NAVIGATION*********************************************/
+.navigation{
+    background-color: #ccc;
+    float: left;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 4%;
+    z-index: 1;
+}
+
+/***********************CONTENT************************************************/
+.content{
+    background-color: #fff;
+    float: left;
+    height: calc(100% - 43px);
+    left: 4%;
+    overflow: auto;
+    position: absolute;
+    top: 43px;
+    width: 96%;
+    z-index: 2;
+}
+
+.content .wrapper{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.content h3 {
+    background-color: lemonchiffon;
+    border-left: 2px solid darkgoldenrod;
+    border-right: 2px solid darkgoldenrod;
+    font-size: 1em !important;
+    margin: .6em;
+    text-align: center !important;
+}
+
+.content h1,
+.content h2 {
+    font-size: 1em;
+    margin: .6em;
+    text-align: center !important;
+}
+
+.content h2 {
+    border-bottom: 1px solid darkcyan;
+}
+
+/***********************FORMS**************************************************/
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"] {
+    border: 1px solid #eee;
+    margin: 0 5%;
+    padding-left: 5px;
+    width: 90%;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="number"]:hover,
+input[type="date"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+input[type="radio"] + label {
+    padding: 2px;
+}
+
+input:checked + span {
+    text-decoration: underline;
+}
+
+input[type="radio"],
+label {
+    cursor: pointer
+}
+
+.negative
+{
+    background-color: indianred;
+    border-color: darkred;
+    color: white;
+}
+
+.positive
+{
+    background-color: darkseagreen;
+    border-color: darkgreen;
+    color: black;
+}
+
+input[type="text"]:invalid,
+input[type="password"]:invalid,
+input[type="number"]:invalid,
+input[type="date"]:invalid,
+button.negative
+{
+    background-color: #fffcfc;
+    border-color: darkred;
+    color: inherit;
+}
+
+input[type="text"]:valid,
+input[type="password"]:valid,
+input[type="number"]:valid,
+input[type="date"]:valid,
+button.positive
+{
+    background-color: #fcfffc;
+    border-color: darkgreen;
+    color: inherit;
+}
+
+input[type="radio"]:invalid + label {
+    border-bottom: 1px solid darkred;
+    border-right: 1px solid darkred;
+}
+
+form .line {
+    margin-top: 15px;
+}
+
+form .btnLine {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/***********************FORMS / SEARCH*****************************************/
+button,
+#searchSpace input[type='text'] {
+    background-color: lightyellow;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    margin: 1px 10px;
+}
+button {
+    cursor: pointer;
+}
+
+button:hover,
+#searchSpace input[type='text']:hover {
+    border-width: 2px;
+    margin: 0 9px;
+}
+
+/***********************SEARCH*************************************************/
+#searchSpace {
+    display: inline-block;
+}
+
+#searchSpace input,
+#searchSpace button{
+    font-size: 1em;
+}
+
+#searchResult li {
+    cursor: pointer;
+}
+
+/***********************BREADCRUMB*********************************************/
+#breadcrumb {
+    display: inline-block;
+    font-size: .9em;
+    font-style: italic;
+}
+
+#breadcrumb a {
+    font-weight: bold;
+}
+
+/***********************TALK SPACE*********************************************/
+.errorSpace {
+    background-color: #fafafa;
+    color: darkred;
+    font-size: 1em;
+    max-height: 150px;
+    overflow: auto;
+}
+
+.messageSpace {
+    background-color: #fafafa;
+    color: darkblue;
+    font-size: 1em;
+    max-height: 150px;
+    overflow: auto;
+}
+
+/***********************RELATÓRIO**********************************************/
+.relatorio {
+    border: 1px solid #333;
+    border-radius: 5px;
+    height: 100%;
+    overflow: auto;
+    padding: 5px;
+    width: 100%;
+}
+
+.relatorio div {
+    cursor: pointer;
+}
+
+.relatorio a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}

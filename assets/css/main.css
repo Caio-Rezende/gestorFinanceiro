@@ -1,0 +1,9 @@
+h3 {
+    cursor: pointer;
+}
+
+.selected {
+    border-left: 2px solid darkgoldenrod;
+    border-right: 2px solid darkgoldenrod;
+    padding: 0 5px;
+}
